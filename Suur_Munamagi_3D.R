@@ -38,6 +38,7 @@ plot(DEM_crop,col = terrain.colors(n=50))
 # convert DEM from raster to matrix
 DEM_matrix  <-  raster_to_matrix(DEM_crop)
 
+
 # Plot to preview
 DEM_matrix %>%
   sphere_shade(texture = "desert", sunangle = 45) %>% 
@@ -103,6 +104,7 @@ image_crop <- raster::crop(image, polygon)
 
 # plot cropped orthphoto
 plotRGB(image_crop)
+
 
 # Convert raster to the matrix
 names(image_crop) <-  c("r","g","b")
